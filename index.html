@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator App</title>
+    <link rel="stylesheet" href="stles/style.css">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">  
+</head>
+<body>
+    <div class="container text-center">
+         </div class='calc-container'>
+              <div class="row">
+                  <form name="calc">
+                      <input type="text" id="entry"
+                      class="entry text-right" value="0" 
+                      readonly>
+                  </form>
+              </div>
+              <div class="row">
+                  <button id="number button" type="button"
+                  class="btn btn-primary numBut"
+                  onclick="numButPress(7)">7</button>
+                  <button id="number button" type="button"
+                  class="btn btn-primary numBut"
+                  onclick="numButPress(8)">8</button>
+                  <button id="number button" type="button"
+                  class="btn btn-primary numBut"
+                  onclick="numButPress(9)">9</button>
+                  <button id="number button" type="button"
+                  class="btn btn-success mathBut"
+                  onclick="mathButPress('+')">+</button>
+              </div>
+              <div class="row">
+                <button id="number button" type="button"
+                class="btn btn-primary numBut"
+                onclick="numButPress(4)">4</button>
+                <button id="number button" type="button"
+                class="btn btn-primary numBut"
+                onclick="numButPress(5)">5</button>
+                <button id="number button" type="button"
+                class="btn btn-primary numBut"
+                onclick="numButPress(6)">6</button>
+                <button id="number button" type="button"
+                class="btn btn-success mathBut"
+                onclick="mathButPress('-')">-</button>
+            </div>
+            <div class="row">
+                <button id="number button" type="button"
+                class="btn btn-primary numBut"
+                onclick="numButPress(1)">1</button>
+                <button id="number button" type="button"
+                class="btn btn-primary numBut"
+                onclick="numButPress(2)">2</button>
+                <button id="number button" type="button"
+                class="btn btn-primary numBut"
+                onclick="numButPress(3)">3</button>
+                <button id="number button" type="button"
+                class="btn btn-success mathBut"
+                onclick="mathButPress('*')">*</button>
+            </div>
+            <div class="row">
+                <button id="clearBut" type="button"
+                class="btn btn-danger numBut"
+                onclick="clearButPress()">AC</button>
+                <button id="numBut" type="button"
+                class="btn btn-primary numBut"
+                onclick="numButPress(0)">0</button>
+                <button id="numBut" type="button"
+                class="btn btn-primary numBut"
+                onclick="numButPress('.')">.</button>
+                <button id="mathBut" type="button"
+                class="btn btn-success mathBut"
+                onclick="mathButPress('/')">/</button>
+            </div>
+            <div class="row">
+                <button id="addMemBut" type="button"
+                class="btn btn-warning numBut"
+                onclick="copyButPress()">MC</button>
+                <button id="pasteMemBut" type="button"
+                class="btn btn-warning numBut"
+                onclick="pasteButPress()">MP</button>
+                <button id="equalBut" type="button"
+                class="btn btn-info equalBut"
+                onclick="equalButPress()">=</button>
+            </div>
+         </div>
+    </div>
+
+    
+
+
+    <script src="js/script.js"> </script>
+</body>
+</html>
