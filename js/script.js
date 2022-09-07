@@ -7,22 +7,26 @@ let decimalClicked = false;
 let valMemStored = "";
 
 function numButPress(num){
+    // Check if a number has been already clicked
     if(resultVal){
+        // Start a new new number
         newVal = num;
+        // Reset to create a new result
         resultVal = "";
-    }
-    else {
+    } else {
+        // Used to block using multiple decimals
         if(num === '.'){
-            if(decimalClicked) != true){
+            if(decimalClicked != true){
                 newVal += num;
                 decimalClicked = true;
             }
-            else {
-                newVal += num;
-            }
+        } else {
+            newVal += num;
         }
-        document.getElementById("entry").value = newVal;
-}
+    };
+        
+    // Update value in entry input tag
+    document.getElementById("entry").value = newVal;
 
 function mathButPress(num){
     if(!resultVal){
@@ -57,6 +61,9 @@ function equalButPress(num){
             resultVal = newVal;
     }
 
+    prevVal = resultVal;
+    document.getElementById("entry").value = resultVal;
+};
 
 function clearButPress(num){
     prevVal = "";
