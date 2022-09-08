@@ -2,7 +2,7 @@
 let prevVal = "";
 let newVal = "";
 let resultVal = "";
-let math0operator = "";
+let math0perator = "";
 let decimalClicked = false;
 let valMemStored = "";
 
@@ -28,23 +28,26 @@ function numButPress(num){
     // Update value in entry input tag
     document.getElementById("entry").value = newVal;
 
-function mathButPress(num){
+function mathButPress(operator){
     if(!resultVal){
         prevVal = newVal;
     } else {
         prevVal = resultVal;
-    }
+    } 
     newVal ="";
     decimalClicked = false;
-    math0operator = operator;
+    math0perator = operator;
+    resultVal = "";
+    document.getElementById("entry").value = ""
 };
 
-function equalButPress(num){
+function equalButPress(){
     decimalClicked = false;
     prevVal = parseFloat(prevVal);
     newVal = parseFloat(newVal);
-}
-    switch(math0operator){
+};
+
+    switch(math0perator){
         case "+":
             resultVal = prevVal + newVal;
             break;
@@ -69,13 +72,13 @@ function clearButPress(num){
     prevVal = "";
     newVal = "";
     resultVal = "";
-    math0operator = "";
+    math0perator = "";
     decimalClicked = false;
     document.getElementById("entry").value = "0";  
 };
 
-function copyButPress(num){
-    valMemStored = document.getElementById("entry").value
+function copyButPress(){
+    valMemStored = document.getElementById("entry").value;
 };
 
 function pasteButPress(num){
