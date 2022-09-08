@@ -27,7 +27,7 @@ function numButPress(num){
         
     // Update value in entry input tag
     document.getElementById("entry").value = newVal;
-
+};
 function mathButPress(operator){
     if(!resultVal){
         prevVal = newVal;
@@ -37,7 +37,6 @@ function mathButPress(operator){
     newVal ="";
     decimalClicked = false;
     math0perator = operator;
-    resultVal = "";
     document.getElementById("entry").value = ""
 };
 
@@ -45,7 +44,6 @@ function equalButPress(){
     decimalClicked = false;
     prevVal = parseFloat(prevVal);
     newVal = parseFloat(newVal);
-};
 
     switch(math0perator){
         case "+":
